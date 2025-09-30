@@ -1,0 +1,74 @@
+show databases;
+Artinya: Menampilkan semua database yang tersedia dalam server MySQL saat ini.
+| Database           |
+|--------------------|
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+
+
+create database nama_folder;
+contoh:
+create database progress_mahasiswa;
+Artinya: Membuat database baru dengan nama progres_mahasiswa.
+ jika sudah membuat folder di atas berarti sudah ada database bernama progres_mahasiswa.
+untuk mengecek kembali "show databases;"
+
+| Database           |
+|--------------------|
+| progress_mahasiswa  |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+
+
+use progres_mahasiswa;
+Artinya: Memilih database progress_mahasiswa sebagai database aktif yang akan digunakan untuk perintah selanjutnya.
+
+create table mahasiswa (
+nama varchar(20),
+nim int(10),
+angkatan int(10)
+);
+Artinya: Membuat sebuah tabel baru bernama mahasiswa dalam database progres_mahasiswa yang berisikan nama = varchar(50),nim = int(10),angkatan int(10
+
+show tables;
+Artinya: Menampilkan semua tabel yang ada di dalam database aktif (progres_mahasiswa).
+muncul gambar seperti ini:
+
+
+create table jam_belajar (
+mata_kuliah varchar(20),
+alokasi_belajar_harian int(10)
+);
+
+Artinya:  
+Membuat tabel baru bernama "jam_belajar" dengan dua kolom:
+-> mata_kuliah → tipe data varchar(20), untuk menyimpan nama mata kuliah.
+- >alokasi_belajar_harian → tipe data int(10), untuk menyimpan jam belajar harian.
+
+insert into mahasiswa (nama, nim, angkatan) 
+values
+('irul',19,24),
+('wan',10,24),
+('lan',25,25)
+;
+Artinya:  
+Memasukkan 3 baris data ke dalam tabel mahasiswa:
+- irul → nim 198, angkatan 24  
+- wan → nim 173, angkatan 24  
+- lan → nim 112, angkatan 25  
+
+select * from mahasiswa;
+Artinya:  
+Menampilkan seluruh isi dari tabel mahasiswa.
+
+| Nama | nim | angkatan |
+|------|-----|----------|
+| irul  | 198 | 24       |
+| wan | 173  | 24       |
+| lan | 112  | 25       |
+
+maka akan muncul sperti ini
